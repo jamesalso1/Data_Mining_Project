@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('user.layouts.index')
 @section('content')
     <div class="content-container d-flex justify-content-center">
         <div class="top-product flex flex-column">

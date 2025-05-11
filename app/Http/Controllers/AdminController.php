@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Log;
+use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -16,6 +17,6 @@ class HomeController extends Controller
         $script_python_path = public_path('storage/script/script.py');
         $run_python = shell_exec('python3 ' . $script_python_path);
         Log::info('Python script executed: ' . $run_python);
-        return view('user.home');
+        return view('admin.index');
     }
 }

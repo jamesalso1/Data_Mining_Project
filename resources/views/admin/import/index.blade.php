@@ -1,7 +1,7 @@
-@extends('layouts.index')
-
+@extends('admin.layouts.index')
 @section('content')
-    <form action="{{ route('product.post') }}" method="POST" enctype="multipart/form-data">
+    <h1>This is import place</h1>
+    <form action="{{ route('admin.import.post') }}" method="POST" enctype="multipart/form-data">
         {{-- csrf token --}}
         @csrf
         <label for="file">Upload file của bạn</label>
