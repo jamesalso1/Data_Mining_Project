@@ -7,55 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Điều kiện cần cho dự án
+- phiên bản node: v24.0.0
+- phiên bản php: v8.3.9
+## Cài đặt dự án lần đầu
+- cài thư viện: npm install && npm run build
+- migrate database: php artisan migrate (Bước này thì nhớ xem cấu hình cơ sở dữ liệu trong file .env nhe)
+## Chạy dự án
+- chạy lệnh: composer run dev
+## cấu hình thư mục 
+### Cấu hình thư mục
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dự án này sử dụng cấu trúc thư mục chuẩn của Laravel. Dưới đây là một số thư mục quan trọng cần chú ý:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **app/**: Chứa mã nguồn chính của ứng dụng, bao gồm các controller, model, và logic xử lý.
+- **bootstrap/**: Chứa tệp `app.php` để khởi tạo ứng dụng.
+- **config/**: Chứa các tệp cấu hình của ứng dụng.
+- **database/**: Chứa các tệp migration, seeders, và cơ sở dữ liệu SQLite (nếu sử dụng).
+- **public/**: Thư mục gốc của ứng dụng, chứa tệp `index.php` và các tài nguyên công khai như CSS, JS, và hình ảnh.
+- **resources/**: Chứa các tệp view, ngôn ngữ, và tài nguyên frontend như CSS và JS.
+- **routes/**: Chứa các tệp định tuyến của ứng dụng.
+- **storage/**: Chứa các tệp log, cache, và các tệp được tạo ra trong quá trình chạy ứng dụng.
+- **tests/**: Chứa các tệp kiểm thử của ứng dụng.
+- **vendor/**: Chứa các thư viện bên thứ ba được cài đặt thông qua Composer.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Hãy đảm bảo rằng các thư mục này được thiết lập đúng quyền truy cập, đặc biệt là thư mục `storage/` và `bootstrap/cache/`, để tránh lỗi trong quá trình chạy ứng dụng.
